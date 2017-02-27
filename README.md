@@ -1,5 +1,15 @@
 # coba-protobuf
 
+# Install
+1. 
+```bash
+git clone https://github.com/google/protobuf.git
+```
+2. Install protoc
+```bash
+sudo apt-get install protobuf-compiler
+```
+
 # Build 
 Build .proto file(s) to .pb.go file(s) using 
 ```bash

@@ -1,7 +1,7 @@
 # coba-protobuf
 
 # Install
-1. 
+1. Git Clone Protobuf
 ```bash
 git clone https://github.com/google/protobuf.git
 ```

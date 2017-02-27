@@ -1,11 +1,11 @@
 # coba-protobuf
 
 # Install
-1. Git Clone Protobuf
+Git Clone Protobuf
 ```bash
 git clone https://github.com/google/protobuf.git
 ```
-2. Install protoc
+Install protoc
 ```bash
 sudo apt-get install protobuf-compiler
 ```

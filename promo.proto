@@ -1,0 +1,22 @@
+package main;
+
+message Promo {
+	required int32 id = 1;
+	required string name = 2;
+	required string base_code = 3;
+	required int32 is_global = 4;
+	
+	message Rule {
+		required int32 rule_id = 1;
+		required string rule_name = 2;
+		required string rule_value = 3;
+	}
+	repeated Rule rules = 5;
+
+	message TimeWindow {
+		required int32 tw_id = 1;
+		required string tw_start = 2;
+		required string tw_end = 3;
+	}
+	repeated TimeWindow timewindows = 6;
+}

@@ -10,7 +10,7 @@ import (
 
 func main() {
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-    	myClientReq := Client{}
+    	myPromoReq := Promo{}
 
         data, err := ioutil.ReadAll(r.Body)
 
@@ -18,17 +18,17 @@ func main() {
             fmt.Println(err)
         }
 
-        if err := proto.Unmarshal(data, &myClientReq); err != nil {
+        if err := proto.Unmarshal(data, &myPromoReq); err != nil {
             fmt.Println(err)
         }
 
-        myClient := &myClientReq
+        myPromo := &myPromoReq
 
-        fmt.Printf("%+v", myClient)
+        fmt.Printf("%+v", myPromo)
 
-        for _, mail := range myClient.Inbox {
-            fmt.Println(mail.RemoteEmail, ":", mail.Body)
-        }
+        // for _, mail := range myPromo.Inbox {
+        //     fmt.Println(mail.RemoteEmail, ":", mail.Body)
+        // }
     })
     
     fmt.Println("Listening....")
